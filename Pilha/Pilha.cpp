@@ -55,10 +55,19 @@ void MostrarPilha() {
 	}
 }
 
+void Desempilhar() {
+	if (PilhaVazia()) {
+		cout << "Erro: pilha vazia!" << endl;
+	}
+	else {
+		top--;
+	}
+}
+
 
 int main()
 {
-	int opcao = 1;
+	int opcao = 1;	
 
 	while (opcao != 0) {
 
@@ -88,6 +97,7 @@ int main()
 			MostrarPilha();
 		}
 		if (opcao == 4) {
+			Desempilhar();
 		}
 		if (opcao > 4) {
 			cout << "Opçao Invalida";
