@@ -35,13 +35,22 @@ void Empilhar() {
 	}
 }
 
+void ExibirTopo() {
+	if (PilhaVazia()) {
+		cout << "Erro: pilha vazia!" << endl;
+	}
+	else {
+		cout << "Elemento [" << top << "] = " << pilha[top - 1] << endl;
+	}
+}
+
 void MostrarPilha() {
 	if (PilhaVazia()) {
 		cout << "Erro: pilha vazia!" << endl;
 	}
 	else {
 		for (int i = top - 1; i >= 0; i--) {
-			cout << "Elemento [" << i << "] = " << pilha[i] << endl;
+			cout << "Elemento [" << i + 1 << "] = " << pilha[i] << endl;
 		}
 	}
 }
@@ -73,6 +82,7 @@ int main()
 			Empilhar();
 		}
 		if (opcao == 2) {
+			ExibirTopo();
 		}
 		if (opcao == 3) {
 			MostrarPilha();
