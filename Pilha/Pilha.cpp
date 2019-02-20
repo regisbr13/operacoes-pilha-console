@@ -3,6 +3,50 @@
 
 using namespace std;
 
+#define size 10
+
+int pilha[size];
+int top = 0;
+
+bool PilhaVazia() {
+	if (top == 0) {
+		return true;
+	}
+	return false;
+}
+
+bool PilhaCheia() {
+	if (top == size) {
+		return true;
+	}
+	return false;
+}
+
+void Empilhar() {
+	if (PilhaCheia()) {
+		cout << "Erro: pilha cheia!" << endl;
+	}
+	else {
+		int num;
+		cout << "Entre com um valor inteiro: ";
+		cin >> num;
+		pilha[top] = num;
+		top++;
+	}
+}
+
+void MostrarPilha() {
+	if (PilhaVazia()) {
+		cout << "Erro: pilha vazia!" << endl;
+	}
+	else {
+		for (int i = top - 1; i >= 0; i--) {
+			cout << "Elemento [" << i << "] = " << pilha[i] << endl;
+		}
+	}
+}
+
+
 int main()
 {
 	int opcao = 1;
@@ -26,10 +70,12 @@ int main()
 			cout << "Fim do programa";
 		}
 		if (opcao == 1) {
+			Empilhar();
 		}
 		if (opcao == 2) {
 		}
 		if (opcao == 3) {
+			MostrarPilha();
 		}
 		if (opcao == 4) {
 		}
