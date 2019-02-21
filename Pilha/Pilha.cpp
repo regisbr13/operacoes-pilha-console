@@ -87,19 +87,19 @@ int main()
 		if (opcao == 0) {
 			cout << "Fim do programa";
 		}
-		if (opcao == 1) {
+		else if (opcao == 1) {
 			Empilhar();
 		}
-		if (opcao == 2) {
+		else if (opcao == 2) {
 			ExibirTopo();
 		}
-		if (opcao == 3) {
+		else if (opcao == 3) {
 			MostrarPilha();
 		}
-		if (opcao == 4) {
+		else if (opcao == 4) {
 			Desempilhar();
 		}
-		if (opcao > 4) {
+		else {
 			cout << "Opçao Invalida";
 		}
 		system("PAUSE");
